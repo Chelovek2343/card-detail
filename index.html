@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Space+Grotesk:300,regular,500" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Card</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="wrapper__cards">
+            <div class="cards">
+                <div class="front__card">
+                    <div class="card__logo">
+                        <img src="assets/img/card-logo.svg" alt="">
+                    </div>
+                    <div class="card__number">
+                        <p id="cardNumber">0000 0000 0000 0000</p>
+                    </div>
+                    <div class="card__bottom">
+                        <div class="username__card">
+                            <p id="cardUsername">JANE APPLESEED</p>
+                        </div>
+                        <div class="card__date">
+                            <p id="cardDate">00/00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="back__card">
+                    <div class="card__cvc">
+                        <p id="cardCvc">000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form" id="mainForm">
+                <form action="" class="active">
+                    <div class="inputs">
+                        <label for="cardholder">CARDHOLDER NAME</label>
+                        <input type="text" id="cardholderInput" placeholder="e.g. Jane Appleseed">
+                    </div>
+                    <div class="inputs">
+                        <label for="number">CARD NUMBER</label>
+                        <input type="text" id="numberInput" placeholder="e.g. 1234 5678 9123 000">
+                    </div>
+                    <div class="wrapper">
+                        <div class="date">
+                            <label for="">EXP. DATE (MM/YY)</label>
+                            <div class="inner">
+                                <div class="mm_input">
+                                    <input type="text" id="mmInput" placeholder="MM">
+                                </div>
+                                <div class="yy_input">
+                                    <input type="text" id="yyInput" placeholder="YY">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cvc">
+                            <label for="cvc">CVC</label>
+                            <input type="text" id="cvcInput" placeholder="e.g. 123">
+                        </div>
+                    </div>
+                </form>
+                <div class="confrim__button">
+                    <button id="confrim">Confrim</button>
+                </div>
+            </div>
+
+            <div class="complete hidden" id="complete">
+                <div class="complete__img">
+                    <img src="assets/img/icon-complete.svg" alt="">
+                </div>
+                <div class="complete__title">
+                    <p>THANK YOU!</p>
+                </div>
+                <div class="complete__text">
+                    <p>We've added your card details</p>
+                </div>
+                <div class="complete__link">
+                    <a href="index.html">Continue</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

@@ -11,6 +11,10 @@ const cvcInput = document.getElementById('cvcInput');
 const confrimBtn = document.getElementById('confrim');
 const complete = document.getElementById('complete');
 const mainForm = document.getElementById('mainForm');
+const inputs = document.querySelectorAll('input');
+const textUnderInputs = document.querySelectorAll('.subtitle');
+
+console.log(textUnderInputs);
 
 form.addEventListener('input', () => {
     cardUsername.textContent = cardholderInput.value;
@@ -19,9 +23,22 @@ form.addEventListener('input', () => {
     cardDate.innerHTML = `${mmInput.value}/${yyInput.value}`;
 });
 
-confrimBtn.addEventListener('click', ()=> {
-    mainForm.classList.add('hidden');
-    mainForm.classList.remove('active');
-    complete.classList.add('active');
-    complete.classList.remove('hidden');
-})
+confrimBtn.addEventListener('click', () => {
+    inputs.forEach((input) => {
+        if (input.value === '') {
+            input.style.border = '1px solid red';
+            textUnderInputs.forEach((text) => {
+                text.style.display = 'block';
+            });
+        } else {
+            mainForm.classList.add('hidden');
+            mainForm.classList.remove('active');
+            complete.classList.add('active');
+            complete.classList.remove('hidden');
+
+            textUnderInputs.forEach((text) => {
+                text.style.display = 'none';
+            });
+        }
+    });
+});

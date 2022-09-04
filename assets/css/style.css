@@ -113,6 +113,11 @@ a {
   border: 1px solid hsl(270, 3%, 87%);
   padding-left: 12px;
 }
+.container .form form p {
+  display: none;
+  color: red;
+  font-size: 12px;
+}
 .container .form form .wrapper {
   display: flex;
   justify-content: space-between;
